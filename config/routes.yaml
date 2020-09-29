@@ -1,0 +1,9 @@
+# config/routes.yaml
+
+app_home:
+    path: /memory/home/
+    controller: App\Controller\PublicController::home
+
+app_play:
+    path: /memory/play/
+    controller: App\Controller\PublicController::play

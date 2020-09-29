@@ -1,0 +1,71 @@
+{# templates/public/play.html.twig #}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('build/app.87545f98.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="pomme"></li>
+            <li class="card" type="pomme"></li>
+            <li class="card" type="banane"></li>
+            <li class="card" type="banane"></li>
+            <li class="card" type="orange" ></li>
+            <li class="card" type="orange"></li>
+            <li class="card" type="citronv"></li>
+            <li class="card" type="citronv"></li>
+            <li class="card" type="grenadine"></li>
+            <li class="card" type="grenadine"></li>
+            <li class="card" type="peche"></li>
+            <li class="card" type="peche"></li>
+            <li class="card" type="citronj"></li>
+            <li class="card" type="citronj"></li>
+            <li class="card" type="fraise"></li>
+            <li class="card" type="fraise"></li>
+            <li class="card" type="pommev"></li>
+            <li class="card" type="pommev"></li>
+            <li class="card" type="peche2"></li>
+            <li class="card" type="peche2"></li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Félicitations !</h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Vous avez gagné !
+                </div>
+                <input type="hidden" name="totalTime" id="totalTime" />
+                <a href="/memory/home/">Valider votre temps</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{ asset('/build/app.e9237594.js') }}"></script>
+</body>
+</html>

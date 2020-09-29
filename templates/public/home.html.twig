@@ -1,0 +1,30 @@
+{# templates/public/home.html.twig #}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('build/app.87545f98.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bienvenu au jeu du Memory Game</h1>
+        </header>
+        {% if scores %}
+          <section>
+            <ul>
+                {% for score in scores %}
+                    <li>{{ score.Score}}</li>
+                {% endfor %}
+            </ul>
+          </section>
+        {% endif %}
+        <section>
+        <a href="/memory/play/">Jouer !</a>
+        </section>
+    </div>
+</body>
+</html>
