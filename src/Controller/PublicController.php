@@ -26,8 +26,7 @@ class PublicController extends AbstractController
       }
 
       // Get all scores
-      $scores = array();
-      //$scores = $em->findAll();
+      $scores = $em->findAll();
 
       return $this->render('public/home.html.twig', [
             'scores' => $scores,
